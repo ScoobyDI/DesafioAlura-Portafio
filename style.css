@@ -1,6 +1,7 @@
 
 :root {
     --color-de-fondo: #FBF5DD;
+    --color-de-fondo2: #EAF2FD;
     --color-de-fondo-menu: #DDA853;
     --color-de-link: black;
     --color-de-texto: black;
@@ -13,10 +14,13 @@ body {
     box-sizing: border-box;
     padding: 0;
     line-height: 1.6;
+    width: 100%;
 }
 
 ol, ul, li {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 a {
@@ -33,19 +37,21 @@ h2 {
 }
 
 /* ------------------------------ Sección Menú -------------------------------*/
+
 .cabecera {
+    
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 1rem 9.5rem;
+    flex-direction: column;
+    padding: 0.6rem;
     background-color: var(--color-de-fondo-menu);
-    justify-content: space-between;
+    align-items: center;
 }
 
 .cabecera__items {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
+    order: 1;
 }
 
 .cabecera__logo {
@@ -57,53 +63,57 @@ h2 {
 }
 
 .navegacion{
-    align-content: flex-end;
-}
-
-.navegacion__lista {
-    display: flex;
-    gap: 2rem;
+    display: none;
 }
 
 .navegacion__elemento {
-    font-size: 1rem;
+    font-size: 0.8rem;
 }
 
 /* ------------------------------ Sección Presentación ------------------------------*/
 .presentacion {
+    padding: 1rem 0.6rem;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    padding: 1rem 9.5rem;
+    justify-content: center; 
+    text-align: center; 
 }
 
 .presentacion__contenedor {
-    width: 47rem;
-}
-
-.presentacion__titulo {
-    font-size: 3.5rem;
-}
-
-.presentacion__subtitulo {
-    font-size: 1.4rem;
+    order: 2; 
 }
 
 .presentacion__foto {
-    width: 368px;
-    height: 368px;
+    width: 6rem;
+    height: 6rem;
     border-radius: 50%;
     object-fit: cover;
     object-position: top;
+    order: 1;
+    align-items: center;
+}
+
+.presentacion__titulo {
+    font-size: 1.4rem;
+}
+
+.presentacion__subtitulo {
+    font-size: 0.8rem;
 }
 
 .presentacion .redes {
-    display: flex;
-    gap: 2rem;
+    display: inline-flex;
+    flex-direction: row;
+    font-size: 0.8rem;
+    gap: 0.5rem;
 }
 
 /* ------------------------------ Sección sobre mí ----------------------------------*/
-
+.sobre-mi {
+    background-color: var(--color-de-fondo2);
+    padding: 1rem 0.6rem;
+}
 
 /*------------------------------ Sección de Habilidades ------------------------------*/
 
@@ -116,3 +126,188 @@ h2 {
 
 /*------------------------------ Sección de Contacto ---------------------------------*/
 
+@media (min-width: 768px) {
+    /* ------------------------------ Sección Menú -------------------------------*/
+
+    .cabecera {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 1rem 2rem;
+        background-color: var(--color-de-fondo-menu);
+        justify-content: space-between;
+    }
+    
+    .cabecera__items {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        order: 1;
+    }
+    
+    .cabecera__logo {
+        min-height: 1.5rem;
+    }
+    
+    .cabecera__titulo {
+        font-size: 1rem;
+    }
+    
+    .navegacion__elemento {
+        font-size: 1rem;
+    }
+    
+    /* ------------------------------ Sección Presentación ------------------------------*/
+    
+    .presentacion {
+        display: flex;
+        flex-direction: row;
+        align-items: normal;
+        justify-content: normal; 
+        text-align: left; 
+        padding: 1rem 2rem;
+        align-items: center;
+        gap: auto;
+    }
+    
+    .presentacion__contenedor {
+        width: 23rem;
+        order: 1;
+        flex-grow: 3;
+    }
+    
+    .presentacion__titulo {
+        font-size: 1.4rem;
+    }
+    
+    .presentacion__subtitulo {
+        font-size: 1rem;
+    }
+    
+    .presentacion__foto {
+        width: 9rem;
+        height: 9rem;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: top;
+        order: 2;
+    }
+    
+    .presentacion .redes {
+        display: flex;
+        gap: 2rem;
+    }
+
+
+    /* ------------------------------ Sección sobre mí ----------------------------------*/
+    
+
+    .sobre-mi {
+        padding: 1rem 2rem;
+    }
+
+    .sobre-mi__texto {
+        width: 100%;
+    }
+
+}
+  
+  
+
+/* Para laptops y desktops pequeños (1024px o más) */
+
+@media (min-width: 1024px) {
+
+    /* ------------------------------ Sección Menú -------------------------------*/
+
+    .cabecera {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 1rem 6rem;
+        background-color: var(--color-de-fondo-menu);
+        justify-content: space-between;
+    }
+    
+    .cabecera__items {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        order: 1;
+    }
+    
+    .cabecera__logo {
+        min-height: 1.5rem;
+    }
+    
+    .cabecera__titulo {
+        font-size: 1rem;
+    }
+    
+    .navegacion{
+        align-content: normal;
+        order: 2;
+        display: block;
+    }
+    
+    .navegacion__lista {
+        display: flex;
+        gap: 2rem;
+    }
+    
+    .navegacion__elemento {
+        font-size: 1rem;
+    }
+    
+    /* ------------------------------ Sección Presentación ------------------------------*/
+    
+    .presentacion {
+        display: flex;
+        flex-direction: row;
+        align-items: normal;
+        justify-content: normal; 
+        text-align: left; 
+        padding: 1rem 6rem;
+        align-items: center;
+        gap: auto;
+    }
+    
+    .presentacion__contenedor {
+        order: 1;
+    }
+    
+    .presentacion__titulo {
+        font-size: 3.25rem;
+    }
+    
+    .presentacion__subtitulo {
+        font-size: 1.4rem;
+    }
+    
+    .presentacion__foto {
+        width: 23rem;
+        height: 23rem;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: top;
+        order: 2;
+    }
+    
+    .presentacion .redes {
+        display: flex;
+        gap: 2rem;
+    }
+
+
+    /* ------------------------------ Sección sobre mí ----------------------------------*/
+
+
+    .sobre-mi {
+        padding: 1rem 6rem;
+    }
+
+    .sobre-mi__texto {
+        width: 60%;
+    }
+  }
+  

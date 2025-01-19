@@ -1,3 +1,7 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
 
 :root {
     --color-de-fondo: #FBF5DD;
@@ -5,6 +9,7 @@
     --color-de-fondo-menu: #DDA853;
     --color-de-link: black;
     --color-de-texto: black;
+    --color-de-tarjetas: orange;
 }
 
 body {
@@ -39,12 +44,11 @@ h2 {
 /* ------------------------------ Sección Menú -------------------------------*/
 
 .cabecera {
-    
+    padding: 1rem;
     display: flex;
-    flex-direction: column;
-    padding: 0.6rem;
     background-color: var(--color-de-fondo-menu);
     align-items: center;
+    justify-content: space-between;
 }
 
 .cabecera__items {
@@ -63,21 +67,25 @@ h2 {
 }
 
 .navegacion{
-    display: none;
+    font-size: 0.9rem;
+    order: 2;
 }
 
 .navegacion__elemento {
-    font-size: 0.8rem;
+    display: none;
+}
+
+.contacto-destacado {
+    display: block;
 }
 
 /* ------------------------------ Sección Presentación ------------------------------*/
 .presentacion {
-    padding: 1rem 0.6rem;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center; 
-    text-align: center; 
 }
 
 .presentacion__contenedor {
@@ -96,29 +104,115 @@ h2 {
 
 .presentacion__titulo {
     font-size: 1.4rem;
+    margin: 1rem 0;
 }
 
 .presentacion__subtitulo {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+    margin: 1rem 0;
 }
 
 .presentacion .redes {
     display: inline-flex;
     flex-direction: row;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     gap: 0.5rem;
 }
 
 /* ------------------------------ Sección sobre mí ----------------------------------*/
 .sobre-mi {
     background-color: var(--color-de-fondo2);
-    padding: 1rem 0.6rem;
+    padding: 1rem;
 }
+
+.sobre-mi__firma {
+    display: block;
+}
+
+.sobre-mi__texto {
+    font-size: 0.9rem;
+    margin: 1rem 0;
+}
+
 
 /*------------------------------ Sección de Habilidades ------------------------------*/
 
 
+.habilidades {
+    background-color: var(--color-de-fondo);
+    padding: 1rem;
+}
+
+.habilidades__titulo {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.habilidades__lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem 1rem ;
+    
+}
+
+.habilidades__elemento {
+    background-color: var(--color-de-tarjetas);
+    width:7.5rem;
+    min-height: 5.3rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    gap: 0.6rem;
+    padding: 1rem;
+}
+
+.habilidades__icono {
+    min-height: 2.rem;
+}
+
+
+
 /*------------------------------ Sección de Aficiones --------------------------------*/
+
+.aficiones {
+    background-color: var(--color-de-fondo2);
+    padding: 1rem;
+}
+
+.aficiones__titulo {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.aficiones__lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem 1rem ;
+}
+
+.aficiones__elemento {
+    background-color: var(--color-de-tarjetas);
+    width:7.5rem;
+    min-height: 5.3rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center ; /* Centrar contenido interno horizontalmente */
+    align-items: center; /* Centrar contenido interno verticalmente */
+    gap: 0.6rem;
+    padding: 1rem;
+}
+
+.aficiones__icono {
+    min-height: 2rem;
+}
+
+
+/* ------------------------------ Sección Formación Academica ------------------------------*/
 
 
 /*------------------------------ Sección de Proyectos --------------------------------*/
@@ -126,31 +220,17 @@ h2 {
 
 /*------------------------------ Sección de Contacto ---------------------------------*/
 
+
+
 @media (min-width: 768px) {
+    
     /* ------------------------------ Sección Menú -------------------------------*/
 
     .cabecera {
-        display: flex;
         flex-direction: row;
         align-items: center;
         padding: 1rem 2rem;
-        background-color: var(--color-de-fondo-menu);
-        justify-content: space-between;
-    }
-    
-    .cabecera__items {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-        order: 1;
-    }
-    
-    .cabecera__logo {
-        min-height: 1.5rem;
-    }
-    
-    .cabecera__titulo {
-        font-size: 1rem;
+        
     }
     
     .navegacion__elemento {
@@ -160,14 +240,13 @@ h2 {
     /* ------------------------------ Sección Presentación ------------------------------*/
     
     .presentacion {
-        display: flex;
+        padding: 2rem;
         flex-direction: row;
         align-items: normal;
         justify-content: normal; 
         text-align: left; 
-        padding: 1rem 2rem;
         align-items: center;
-        gap: auto;
+        gap:2rem;
     }
     
     .presentacion__contenedor {
@@ -187,9 +266,6 @@ h2 {
     .presentacion__foto {
         width: 9rem;
         height: 9rem;
-        border-radius: 50%;
-        object-fit: cover;
-        object-position: top;
         order: 2;
     }
     
@@ -198,21 +274,43 @@ h2 {
         gap: 2rem;
     }
 
-
     /* ------------------------------ Sección sobre mí ----------------------------------*/
     
-
     .sobre-mi {
-        padding: 1rem 2rem;
+        padding: 2rem;
     }
 
     .sobre-mi__texto {
         width: 100%;
     }
 
+    /*------------------------------ Sección de Habilidades ------------------------------*/
+
+    .habilidades {
+        padding: 2rem;
+    }
+
+    .habilidades__elemento {
+        width: 12rem;
+        min-height: 5.3rem;
+    }
+
+
+    /*------------------------------ Sección de Aficiones --------------------------------*/
+
+    .aficiones {
+        padding: 2rem;
+    }
+
+    .aficiones__elemento {
+        width: 12rem;
+        min-height: 5.3rem;
+    }
+
 }
-  
-  
+
+
+
 
 /* Para laptops y desktops pequeños (1024px o más) */
 
@@ -221,33 +319,10 @@ h2 {
     /* ------------------------------ Sección Menú -------------------------------*/
 
     .cabecera {
-        display: flex;
+        padding: 0 9.5rem;
+        min-height: 5.5rem;
         flex-direction: row;
-        align-items: center;
-        padding: 1rem 6rem;
-        background-color: var(--color-de-fondo-menu);
         justify-content: space-between;
-    }
-    
-    .cabecera__items {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-        order: 1;
-    }
-    
-    .cabecera__logo {
-        min-height: 1.5rem;
-    }
-    
-    .cabecera__titulo {
-        font-size: 1rem;
-    }
-    
-    .navegacion{
-        align-content: normal;
-        order: 2;
-        display: block;
     }
     
     .navegacion__lista {
@@ -257,27 +332,27 @@ h2 {
     
     .navegacion__elemento {
         font-size: 1rem;
+        display: block;
     }
     
     /* ------------------------------ Sección Presentación ------------------------------*/
     
     .presentacion {
-        display: flex;
+        padding: 2rem 9.5rem;
         flex-direction: row;
         align-items: normal;
         justify-content: normal; 
         text-align: left; 
-        padding: 1rem 6rem;
         align-items: center;
         gap: auto;
     }
-    
+
     .presentacion__contenedor {
-        order: 1;
+        min-height: 15rem;
     }
     
     .presentacion__titulo {
-        font-size: 3.25rem;
+        font-size: 3.2rem;
     }
     
     .presentacion__subtitulo {
@@ -287,10 +362,6 @@ h2 {
     .presentacion__foto {
         width: 23rem;
         height: 23rem;
-        border-radius: 50%;
-        object-fit: cover;
-        object-position: top;
-        order: 2;
     }
     
     .presentacion .redes {
@@ -301,13 +372,44 @@ h2 {
 
     /* ------------------------------ Sección sobre mí ----------------------------------*/
 
-
     .sobre-mi {
-        padding: 1rem 6rem;
+        padding: 4rem 9.5rem ;
     }
 
     .sobre-mi__texto {
         width: 60%;
     }
-  }
-  
+
+    /*------------------------------ Sección de Habilidades ------------------------------*/
+    
+    .habilidades {
+        padding: 1rem 6rem 5.5rem;
+    }
+
+    .habilidades__titulo {
+        font-size: 2rem;
+    }
+
+    .habilidades__elemento {
+        width: 5rem;
+        min-height: 5rem;
+    }
+
+    /*------------------------------ Sección de Aficiones --------------------------------*/
+
+    .aficiones {
+        padding: 1rem 6rem 5.5rem;
+    }
+
+    .aficiones__titulo {
+        font-size: 2rem;
+    }
+
+    .aficiones__elemento {
+        width: 5rem;
+        min-height: 5rem;
+    }
+
+}
+
+   

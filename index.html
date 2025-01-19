@@ -95,12 +95,12 @@
         <h2 class="aficiones__titulo">Aficiones</h2>
         <ul class="aficiones__lista">
             <li class="aficiones__elemento">
-                <img class="aficiones__icono" src="assets/skate_icon.png" alt="Patinaje">
-                <p class="aficiones__nombre">Patinaje</p>
+                <img class="aficiones__icono" src="assets/videogames_icon.png" alt="Patinaje">
+                <p class="aficiones__nombre">Jugar videojuegos</p>
             </li>
             <li class="aficiones__elemento">
                 <img class="aficiones__icono" src="assets/guitar_icon.png" alt="Tocar bajo">
-                <p class="aficiones__nombre">Tocar bajo</p>
+                <p class="aficiones__nombre">Tocar guitarra</p>
             </li>
             <li class="aficiones__elemento">
                 <img class="aficiones__icono" src="assets/headphones_icon.png" alt="Oír música">
@@ -158,25 +158,27 @@
     <!-- Sección de Proyectos -->
     <section class="proyectos" id="proyectos">
         <h2 class="proyectos__titulo">Experiencia Profesional</h2>
-        <div class="proyectos__contenedor">
-            <img class="proyectos__img" src="assets/desencriptador.jpg" alt="UFRJ">
-            <div class="proyectos__detalles">
-                <h3 class="proyectos__nombre">Dasencripador de texto</h3>
-                <p class="proyectos__descripcion">Desafio de Alura, encripta y desencripta lo que quieras!</p>
-                <div class="proyectos__contenedor__boton">
-                    <a href="https://github.com/ScoobyDI/encriptador-alura" class="proyectos__boton proyectos__boton--repositorio" > Repositorio </a>
-                    <a class="proyectos__boton proyectos__boton--demo"> Ver Demo </a>
+        <div class="proyectos__lista">
+            <div class="proyectos__contenedor">
+                <img class="proyectos__img" src="assets/desencriptador.jpg" alt="UFRJ">
+                <div class="proyectos__detalles">
+                    <h3 class="proyectos__nombre">Dasencripador de texto</h3>
+                    <p class="proyectos__descripcion">Desafio de Alura, encripta y desencripta lo que quieras!</p>
+                    <div class="proyectos__contenedor__boton">
+                        <a href="https://github.com/ScoobyDI/encriptador-alura" class="proyectos__boton proyectos__boton--repositorio" > Repositorio </a>
+                        <a class="proyectos__boton proyectos__boton--demo"> Ver Demo </a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="proyectos__contenedor">
-            <img class="proyectos__img" src="assets/juegoPong.jpg" alt="UFRJ">
-            <div class="proyectos__detalles">
-                <h3 class="proyectos__nombre">Proyecto de Juego Pong</h3>
-                <p class="proyectos__descripcion">Juego hecho en JavaScript contra la computadora!</p>
-                <div class="proyectos__contenedor__boton">
-                    <a href="https://github.com/ScoobyDI/Proyecto-JuegoPong-Alura" class="proyectos__boton proyectos__boton--repositorio" > Repositorio </a>
-                    <a class="proyectos__boton proyectos__boton--demo"> Ver Demo </a>
+            <div class="proyectos__contenedor">
+                <img class="proyectos__img" src="assets/juegoPong.jpg" alt="UFRJ">
+                <div class="proyectos__detalles">
+                    <h3 class="proyectos__nombre">Proyecto de Juego Pong</h3>
+                    <p class="proyectos__descripcion">Juego hecho en JavaScript contra la computadora!</p>
+                    <div class="proyectos__contenedor__boton">
+                        <a href="https://github.com/ScoobyDI/Proyecto-JuegoPong-Alura" class="proyectos__boton proyectos__boton--repositorio" > Repositorio </a>
+                        <a class="proyectos__boton proyectos__boton--demo"> Ver Demo </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -184,14 +186,26 @@
 
     <!-- Sección de Contacto -->
     <section class="contacto" id="contacto">
-        <h2 class="contacto__titulo">Contacto</h2>
-        <form class="contacto__formulario">
-            <input class="contacto__campo" type="text" placeholder="Nombre">
-            <input class="contacto__campo" type="email" placeholder="Correo Electrónico">
-            <textarea class="contacto__campo contacto__campo--textarea" placeholder="Mensaje"></textarea>
-            <button class="contacto__boton" type="submit">Enviar</button>
-        </form>
+        <img src="/assets/contact_image.png" class="contacto__img" alt="imgContact">
+        <div class="contacto__section__form">
+            <div class="contacto__detalles">
+                <h2 class="contacto__titulo">Contacto</h2>
+                <p class="contacto__descripcion"> Si quieres contactarme rellena este formulario, y me pondré en contacto contigo lo antes posible. </p>
+            </div>
+            <form class="contacto__formulario">
+                <input class="contacto__campo" type="text" placeholder="Nombre" required>
+                <input class="contacto__campo" type="email" placeholder="Correo Electrónico" required>
+                <input class="contacto__campo" type="text" placeholder="Asunto" required>
+                <textarea class="contacto__campo contacto__campo--textarea" type="text" placeholder="Mensaje" required></textarea>
+                <button class="contacto__boton" type="submit">Enviar</button>
+            </form>
+        </div>
     </section>
+
+    <footer class="footer">
+        <p> Desarrollado por José Luis De la Cruz Iñigo </p>
+        <p> 2025 </p>
+    </footer>
 </body>
     <script src="script.js"></script>
 </html>

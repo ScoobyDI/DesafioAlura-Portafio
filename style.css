@@ -41,6 +41,8 @@ h2 {
     color: var(--color-de-texto);
 }
 
+/* Para celulares */
+
 /* ------------------------------ Sección Menú -------------------------------*/
 
 .cabecera {
@@ -73,6 +75,14 @@ h2 {
 
 .navegacion__elemento {
     display: none;
+}
+
+.navegacion__elemento{
+    display: none;
+}
+
+.navegacion__elemento a:hover {
+    color: #a52019;
 }
 
 .contacto-destacado {
@@ -117,6 +127,10 @@ h2 {
     flex-direction: row;
     font-size: 0.9rem;
     gap: 0.5rem;
+}
+
+.presentacion .redes a:hover {
+    color: #a52019;
 }
 
 /* ------------------------------ Sección sobre mí ----------------------------------*/
@@ -207,8 +221,12 @@ h2 {
     padding: 1rem;
 }
 
+.aficiones__nombre {
+    text-align: center;
+}
+
 .aficiones__icono {
-    min-height: 2rem;
+    max-height: 2rem;
 }
 
 
@@ -254,7 +272,7 @@ h2 {
 
 .proyectos {
     background-color: var(--color-de-fondo);
-    padding: 2rem 2rem 0 2rem;
+    padding: 2rem;
 }
 
 .proyectos__titulo {
@@ -262,11 +280,16 @@ h2 {
     text-align: center;
 }
 
+.proyectos__lista {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
 .proyectos__contenedor {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    margin-bottom: 4rem;
 }
 
 .proyectos__img {
@@ -309,21 +332,64 @@ h2 {
 .contacto {
     background-color: var(--color-de-fondo2);
     padding: 2rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.contacto__img {
+    display: none;
+}
+
+.contacto__detalles {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.contacto__section__form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contacto__formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+.contacto__campo {
+    margin-bottom: 2rem;
+    min-height: 3.5rem;
+    font-size: 1rem;
+    position: relative;
+    padding: 1rem;
+}
+
+.contacto__campo--textarea {
+    min-height: 8.3rem;
+}
+
+.contacto__boton {
+    align-self: flex-start;
+    border: 1px solid #2A7AE4;
+    width: 6rem;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    font-size: 0.85rem;
+    background-color: #2A7AE4;
+    color: white;
+}
+
+.footer {
+    text-align: center;
+    padding: 2rem 4rem;
 }
 
 
 
 
 
-
-
-
-
-
-
-
-
-
+/* Tablets y pantallas pequeñas */
 
 @media (min-width: 768px) {
     
@@ -419,6 +485,9 @@ h2 {
 
     /*------------------------------ Sección de Proyectos --------------------------------*/
 
+    .contacto {
+        justify-content: center;
+    }
 
 }
 
@@ -426,24 +495,14 @@ h2 {
 
 
 
-
-
-
-
-
-
-
-
-
-
-/* Para laptops y desktops pequeños (1024px o más) */
+/* Pantallas grandes */
 
 @media (min-width: 1024px) {
 
     /* ------------------------------ Sección Menú -------------------------------*/
 
     .cabecera {
-        padding: 0 9.5rem;
+        padding: 0 7.5rem;
         min-height: 5.5rem;
         flex-direction: row;
         justify-content: space-between;
@@ -462,7 +521,7 @@ h2 {
     /* ------------------------------ Sección Presentación ------------------------------*/
     
     .presentacion {
-        padding: 2rem 9.5rem;
+        padding: 2rem 7.5rem;
         flex-direction: row;
         align-items: normal;
         justify-content: normal; 
@@ -497,7 +556,7 @@ h2 {
     /* ------------------------------ Sección sobre mí ----------------------------------*/
 
     .sobre-mi {
-        padding: 4rem 9.5rem ;
+        padding: 4rem 7.5rem ;
     }
 
     .sobre-mi__texto {
@@ -507,7 +566,7 @@ h2 {
     /*------------------------------ Sección de Habilidades ------------------------------*/
     
     .habilidades {
-        padding: 1rem 6rem 5.5rem;
+        padding: 1rem 7.5rem 5.5rem;
     }
 
     .habilidades__titulo {
@@ -522,7 +581,7 @@ h2 {
     /*------------------------------ Sección de Aficiones --------------------------------*/
 
     .aficiones {
-        padding: 1rem 6rem 5.5rem;
+        padding: 1rem 7.5rem 5.5rem;
     }
 
     .aficiones__titulo {
@@ -537,13 +596,13 @@ h2 {
     /* ------------------------------ Sección Formación Academica ------------------------------*/
 
     .formacion {
-        padding: 5.1rem 5.5rem;
+        padding: 5.1rem 7.5rem;
     }
 
     /*------------------------------ Sección de Proyectos --------------------------------*/
 
     .proyectos {
-        padding: 2rem 5.5rem;
+        padding: 2rem 7.5rem;
     }
 
     .proyectos__titulo {
@@ -555,12 +614,21 @@ h2 {
         display: flex;
         flex-direction: row;
         gap: 1rem;
-        margin-bottom: 4rem;
         align-items: center;
     }
 
     .proyectos__img {
         width: 60%;
+    }
+
+    /*------------------------------ Sección de Contacto ---------------------------------*/
+
+    .contacto {
+        padding: 7.5rem;
+    }
+
+    .contacto__img {
+        display: block;
     }
     
 }

@@ -158,7 +158,7 @@ h2 {
 
 .habilidades__elemento {
     background-color: var(--color-de-tarjetas);
-    width:7.5rem;
+    width:7.5rem;          /*O ponerlo Fijo con 7.5rem o 37%*/
     min-height: 5.3rem;
     flex-grow: 1;
     display: flex;
@@ -178,7 +178,7 @@ h2 {
 /*------------------------------ Sección de Aficiones --------------------------------*/
 
 .aficiones {
-    background-color: var(--color-de-fondo2);
+    background-color: var(--color-de-fondo);
     padding: 1rem;
 }
 
@@ -196,13 +196,13 @@ h2 {
 
 .aficiones__elemento {
     background-color: var(--color-de-tarjetas);
-    width:7.5rem;
+    width: 7.5rem;
     min-height: 5.3rem;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center ; /* Centrar contenido interno horizontalmente */
-    align-items: center; /* Centrar contenido interno verticalmente */
+    justify-content: center ;
+    align-items: center;
     gap: 0.6rem;
     padding: 1rem;
 }
@@ -213,12 +213,115 @@ h2 {
 
 
 /* ------------------------------ Sección Formación Academica ------------------------------*/
+.formacion {
+    background-color: var(--color-de-fondo2);
+    padding: 2rem;
+}
+
+.formacion__titulo {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.formacion__lista {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+}
+
+.formación__container__icono {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alinea verticalmente */
+    padding: 2rem;
+    margin-bottom: 1rem;
+}
+
+.formacion__elemento {
+    width: 18.5rem;
+    flex-grow: 1;
+}
+
+.formacion__icono {
+    width: 50%;
+}
 
 
 /*------------------------------ Sección de Proyectos --------------------------------*/
 
+.proyectos {
+    background-color: var(--color-de-fondo);
+    padding: 2rem 2rem 0 2rem;
+}
+
+.proyectos__titulo {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.proyectos__contenedor {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 4rem;
+}
+
+.proyectos__img {
+    width: 100%;
+}
+
+.proyectos__detalles{
+    gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.proyectos__contenedor__boton {
+    display: flex;
+    gap: 1rem ;
+}
+
+.proyectos__boton {
+    border: 1px solid #2A7AE4;
+    width: 6rem;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    font-size: 0.85rem;
+}
+
+.proyectos__boton--repositorio {
+    color: #2A7AE4;
+}
+
+.proyectos__boton--demo {
+    background-color: #2A7AE4;
+    color: white;
+}
+
+
 
 /*------------------------------ Sección de Contacto ---------------------------------*/
+
+
+.contacto {
+    background-color: var(--color-de-fondo2);
+    padding: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -287,11 +390,11 @@ h2 {
     /*------------------------------ Sección de Habilidades ------------------------------*/
 
     .habilidades {
-        padding: 2rem;
+        padding: 2rem; 
     }
 
     .habilidades__elemento {
-        width: 12rem;
+        width: 12rem;       /* 12rem o 27%*/
         min-height: 5.3rem;
     }
 
@@ -307,7 +410,28 @@ h2 {
         min-height: 5.3rem;
     }
 
+    
+    /* ------------------------------ Sección Formación Academica ------------------------------*/
+
+    .formacion__elemento {
+        width: 14rem;
+    }
+
+    /*------------------------------ Sección de Proyectos --------------------------------*/
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -410,6 +534,35 @@ h2 {
         min-height: 5rem;
     }
 
+    /* ------------------------------ Sección Formación Academica ------------------------------*/
+
+    .formacion {
+        padding: 5.1rem 5.5rem;
+    }
+
+    /*------------------------------ Sección de Proyectos --------------------------------*/
+
+    .proyectos {
+        padding: 2rem 5.5rem;
+    }
+
+    .proyectos__titulo {
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+    
+    .proyectos__contenedor {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        margin-bottom: 4rem;
+        align-items: center;
+    }
+
+    .proyectos__img {
+        width: 60%;
+    }
+    
 }
 
    
